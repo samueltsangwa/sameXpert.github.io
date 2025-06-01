@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <!-- <img src="logo.png" alt="Your Logo" class="logo-img"> -->
+                <span class="logo-text">Samuel Tsangwa Kahindi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#github">GitHub/Code</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Homepage Section -->
+    <section id="home" class="homepage">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Cloud Specialist | Network Engineer | IT Support Specialist | Front-End Developer | Back-End Developer</p>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Android Development</li>
+                    <li>MySQL</li>
+                    <li>Cloud Computing (AWS)</li>
+                    <li>Networking</li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <p>Email: samueltsangwa24@gmail.com</p>
+                <p>Phone: +254706648013</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                <h3>Web-Based System</h3>
+                <p>A University Voting System.</p>
+                <a href="https://github.com/samueltsangwa/kuevs" target="_blank">Live Demo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Front-End Website</h3>
+                    <p>A description of your front-end project.</p>
+                    <a href="#">Live Demo</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Front-End Website</h3>
+                    <p>A description of your front-end project.</p>
+                    <a href="#">Live Demo</a>
+                </div>
+            </div>
+            
+                <div class="project-card">
+                    <h3>Front-End Website</h3>
+                    <p>A description of your front-end project.</p>
+                    <a href="https://awsrestart.instructure.com/courses/3706/assignments/518190?module_item_id=2429852">Live Demo</a>
+                </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A short bio about your career and journey.</p>
+            <h3>Education</h3>
+            <p>Your educational background.</p>
+            <h3>Work Experience</h3>
+            <p>Details about your roles and responsibilities.</p>
+            <h3>Technologies</h3>
+            <p>List of technologies you are proficient in.</p>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <div class="container">
+            <h2>Case Studies</h2>
+            <div class="case-study">
+                <h3>Project Name</h3>
+                <p>Detailed write-up of the project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub/Code Section -->
+    <section id="github" class="github">
+        <div class="container">
+            <h2>GitHub/Code</h2>
+            <ul>
+                <li><a href="#">Repository 1</a> - Description</li>
+                <li><a href="#">Repository 2</a> - Description</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html
