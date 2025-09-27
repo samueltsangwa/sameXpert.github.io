@@ -8,107 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <!-- <img src="logo.png" alt="Your Logo" class="logo-img"> -->
-                <span class="logo-text">Samuel Tsangwa Kahindi</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#github">GitHub/Code</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle">☰</button>
-        </div>
-    </nav>
-    <style>
-        .navbar {
-            position: fixed;        
-            top: 0;                
-            left: 0;                
-            width: 100%;   
-            z-index: 999;           
-        }
+  <!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <!-- <img src="logo.png" class="logo-img"> -->
+        <span class="logo-text">Samuel Tsangwa Kahindi</span>
+      </a>
 
-        body {
-            padding-top: 60px;    
-        }
+      <!-- Hamburger button -->
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
 
-        .navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#github">GitHub/Code</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-        .navbar a {
-            text-decoration: none;
-        }
-        
-        /* Base styles */
-        .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        }
-
-        .navbar .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        }
-
-        .navbar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-        }
-
-        .nav-toggle {
-        display: none;
-        font-size: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .nav-links.active {
-            display: flex;
-        }
-
-        .nav-toggle {
-            display: block;
-        }
-        }
-        </style>
     <!-- Homepage Section -->
     <section id="home" class="homepage">
         <div class="container">
-            <h1>Samuel Tsangwa Kahindi</h1>
+            <h1>SAMUEL TSANGWA KAHINDI</h1>
             <p>Cloud Specialist | Network Engineer | IT Support Specialist | Front-End Developer | Back-End Developer</p>
                 <h3>Personal Profile</h3>
                 <p><p>Resourceful and dedicated IT support professional and proficient in administering firewalls, routers, servers, and cloud-based solutions while ensuring high system availability and cybersecurity compliance. Committed to delivering timely solutions and improving user satisfaction in dynamic and service-oriented environments.</p></p>
@@ -359,8 +290,6 @@
   });
 </script>
 
-
-    <script src="scripts.js"></script>
     <!-- Footer Section -->
 <footer class="main-footer">
     <div class="container footer-center">
@@ -370,5 +299,24 @@
         </a>
     </div>
 </footer>
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle.addEventListener('click', () => {
+        const isActive = navLinks.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(isActive));
+      });
+
+      // close menu on link click (mobile)
+      navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' && navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
 </body>
 </html
